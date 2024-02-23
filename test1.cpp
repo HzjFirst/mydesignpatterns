@@ -2,6 +2,7 @@
 #include <tuple>
 #include "visitor/visitor.h"
 #include "obs/weatherdata.h"
+#include "strategy/duck.h"
 
 std::tuple<int,double,std::string> foo()
 {
@@ -57,6 +58,8 @@ void printf1(T value, Ts... args) {
 
 int main()
 {
+    strategy_demo();
+    return 0;
     observer_demo();
     return 0;
     QFile file(u8"F:/hou.csv");
