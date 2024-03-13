@@ -6,6 +6,8 @@ CONFIG -= app_bundle
 include($$PWD/visitor/visitor.pri)
 include($$PWD/obs/obs.pri)
 include($$PWD/strategy/strategy.pri)
+include($$PWD/state/state.pri)
+include($$PWD/myself/myself.pri)
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.

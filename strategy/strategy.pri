@@ -1,4 +1,4 @@
-INCLUDEPATH += quote($$PWD)
+INCLUDEPATH += $$quote($$PWD)
 
 HEADERS += \
     $$PWD/duck.h \
