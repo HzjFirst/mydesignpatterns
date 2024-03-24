@@ -2,19 +2,19 @@
 
 void GeneralReport::visit(Customer &customer)
 {
-    qDebug()<<customer.getName();
+    qDebug()<<customer.getName().c_str();
     ++customersNo;
 }
 
 void GeneralReport::visit(Order &order)
 {
-    qDebug() << order.getName();
+    qDebug() << order.getName().c_str();
     ++ordersNo;
 }
 
 void GeneralReport::visit(Item &item)
 {
-    qDebug() << item.getName();
+    qDebug() << item.getName().c_str();
     ++itemsNo;
 }
 

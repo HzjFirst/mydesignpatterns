@@ -10,4 +10,8 @@ void select_sort(std::vector<int> &a);
 
 void insert_sort(std::vector<int> &a);
 
+void merge_sort(std::vector<int> &a);
+
+void find_max_sub(std::vector<int> &a);
+
 #endif // MYAL_H

@@ -82,9 +82,10 @@ IteratorType my_find(IteratorType first, IteratorType last, const elemType &valu
 
 int main()
 {
-    vector<int> ac{1,5,3,4};
+    vector<int> ac{-1,-5,-3,-4,-0};
+//    vector<int> ac{13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
     cout << "start" <<endl;
-    insert_sort(ac);
+    find_max_sub(ac);
     cout << "end" <<endl;
     system("pause");
 
