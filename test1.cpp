@@ -52,12 +52,56 @@ void printf1(T value, Ts... args) {
 #include <algorithm>
 #include <vector>
 #include <limits>
+#include <thread>
 #include "numseq.h"
+#include "myal.h"
 
 using namespace std;
 
+class A
+{
+public:
+    A() {}
+};
+
+A * create_a()
+{
+    static A a;
+    cout<<&a<<endl;
+    return &a;
+}
+
+template <typename IteratorType, typename elemType>
+IteratorType my_find(IteratorType first, IteratorType last, const elemType &value)
+{
+    for(; first != last; ++first)
+        if(value == *first)
+            return first;
+    return last;
+}
+
 int main()
 {
+    vector<int> ac{1,5,3,4};
+    cout << "start" <<endl;
+    insert_sort(ac);
+    cout << "end" <<endl;
+    system("pause");
+
+    const int asize = 4;
+    int ia1[asize] = { 1,2,3,4};
+    int *pia = my_find<int*,int>(ia1,ia1+asize,3);
+    if(pia != ia1+asize)
+        cout<<*pia<<endl;
+
+    thread t1(create_a);
+    thread t2(create_a);
+    thread t3(create_a);
+    thread t4(create_a);
+    t1.join();
+    t2.join();
+    t3.join();
+    t4.join();
     cout << seq_func[1](2);
     cout << seq_func[2](0) << endl;
 

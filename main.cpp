@@ -110,12 +110,12 @@ void propertySingle()
 
 int main1()
 {
-    QFile out(u8"E:\\work\\project\\gms\\0129\\odata\\4开采量\\kacailiang.csv");
+    QFile out(u8"E:\\work\\project\\gms\\0318\\odata\\4开采量\\kacailiang.csv");
     out.open(QIODevice::WriteOnly);
     QTextStream stream(&out);
     stream << "name,date,time,value";
     QString time = " 0:00:00";
-    QFile in(u8"E:\\work\\project\\gms\\0129\\odata\\4开采量\\开采量.csv");
+    QFile in(u8"E:\\work\\project\\gms\\0318\\odata\\4开采量\\开采量.csv");
     in.open(QIODevice::ReadOnly);
     QString data = in.readLine().simplified();
     QStringList heads = data.split(",");
